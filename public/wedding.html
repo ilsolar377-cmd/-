@@ -75,7 +75,6 @@
   }
 
   .invite-label {
-    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 6px;
     text-transform: uppercase;
@@ -156,7 +155,7 @@
 
   @keyframes bounce {
     0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(8px); }
+    50%       { transform: translateX(-50%) translateY(8px); }
   }
 
   /* ── DIVIDER ── */
@@ -168,19 +167,13 @@
     margin: 0 auto;
     max-width: 500px;
   }
-
   .divider::before, .divider::after {
     content: '';
     flex: 1;
     height: 1px;
     background: linear-gradient(to right, transparent, var(--gold), transparent);
   }
-
-  .divider-icon {
-    color: var(--gold);
-    font-size: 18px;
-    flex-shrink: 0;
-  }
+  .divider-icon { color: var(--gold); font-size: 18px; flex-shrink: 0; }
 
   /* ── SECTIONS ── */
   .section {
@@ -204,11 +197,7 @@
     line-height: 1.1;
     margin-bottom: 24px;
   }
-
-  .section-title em {
-    font-style: italic;
-    color: var(--gold);
-  }
+  .section-title em { font-style: italic; color: var(--gold); }
 
   .section-text {
     font-size: 15px;
@@ -225,15 +214,8 @@
     padding: 80px 24px;
     text-align: center;
   }
-
-  .countdown-section .section-label {
-    color: var(--gold-light);
-    opacity: 0.7;
-  }
-
-  .countdown-section .section-title {
-    color: #fff;
-  }
+  .countdown-section .section-label { color: var(--gold-light); opacity: 0.7; }
+  .countdown-section .section-title { color: #fff; }
 
   .countdown {
     display: flex;
@@ -242,14 +224,7 @@
     margin-top: 48px;
     flex-wrap: wrap;
   }
-
-  .count-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
+  .count-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
   .count-num {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(52px, 10vw, 96px);
@@ -259,14 +234,7 @@
     min-width: 100px;
     text-align: center;
   }
-
-  .count-label {
-    font-size: 10px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
-  }
-
+  .count-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.4); }
   .count-sep {
     font-family: 'Cormorant Garamond', serif;
     font-size: 60px;
@@ -275,6 +243,63 @@
     align-self: center;
     margin-bottom: 20px;
     line-height: 1;
+  }
+
+  /* ── PHOTO PORTRAIT ── */
+  .photo-section {
+    padding: 80px 24px;
+    background: var(--cream);
+    text-align: center;
+  }
+
+  .photo-frame-outer {
+    display: inline-block;
+    position: relative;
+    padding: 16px;
+    background: linear-gradient(145deg, #e8d5a3 0%, #c9a96e 40%, #e8d5a3 60%, #c9a96e 100%);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.18), 0 4px 16px rgba(201,169,110,0.3);
+    max-width: 420px;
+    width: 100%;
+  }
+
+  .photo-frame-inner {
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 8px;
+    background: #fff;
+  }
+
+  .photo-frame-inner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 560px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .photo-ornament-top,
+  .photo-ornament-bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--dark);
+    opacity: 0.55;
+    letter-spacing: 4px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .photo-ornament-top    { top: -14px; }
+  .photo-ornament-bottom { bottom: -14px; }
+
+  .photo-caption {
+    margin-top: 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-style: italic;
+    color: var(--gold);
+    letter-spacing: 3px;
   }
 
   /* ── DETAILS ── */
@@ -287,62 +312,17 @@
     background: var(--gold-light);
     border: 1px solid var(--gold-light);
   }
-
-  .detail-card {
-    background: var(--cream);
-    padding: 44px 32px;
-    text-align: center;
-  }
-
-  .detail-icon {
-    font-size: 28px;
-    margin-bottom: 16px;
-    display: block;
-  }
-
-  .detail-title {
-    font-size: 10px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 12px;
-  }
-
-  .detail-value {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
-    font-weight: 300;
-    color: var(--dark);
-    line-height: 1.3;
-  }
-
-  .detail-sub {
-    font-size: 12px;
-    color: #999;
-    margin-top: 6px;
-    letter-spacing: 1px;
-  }
-
-  /* ── PHOTO STRIP ── */
-  .photo-strip {
-    height: 60vh;
-    min-height: 360px;
-    background: url('photo.jpg') center 20%/cover no-repeat;
-    position: relative;
-  }
-
-  .photo-strip::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(250,247,242,0.8), transparent 30%, transparent 70%, rgba(250,247,242,0.8));
-  }
+  .detail-card { background: var(--cream); padding: 44px 32px; text-align: center; }
+  .detail-icon { font-size: 28px; margin-bottom: 16px; display: block; }
+  .detail-title { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .detail-value { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--dark); line-height: 1.3; }
+  .detail-sub { font-size: 12px; color: #999; margin-top: 6px; letter-spacing: 1px; }
 
   /* ── QUOTE ── */
   .quote-section {
     padding: 100px 24px;
     text-align: center;
-    background: var(--cream);
+    background: var(--dark);
   }
 
   .quote {
@@ -350,14 +330,21 @@
     font-size: clamp(22px, 4vw, 38px);
     font-style: italic;
     font-weight: 300;
-    color: var(--dark);
+    color: #fff;
     max-width: 700px;
     margin: 0 auto;
-    line-height: 1.6;
+    line-height: 1.7;
   }
-
   .quote::before { content: '\201C'; color: var(--gold); font-size: 1.5em; line-height: 0; vertical-align: -0.4em; margin-right: 4px; }
   .quote::after  { content: '\201D'; color: var(--gold); font-size: 1.5em; line-height: 0; vertical-align: -0.4em; margin-left: 4px; }
+
+  .quote-author {
+    margin-top: 28px;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+  }
 
   /* ── RSVP ── */
   .rsvp-section {
@@ -365,14 +352,13 @@
     padding: 100px 24px;
     text-align: center;
   }
-
   .rsvp-section .section-title { color: #fff; }
-  .rsvp-section .section-text { color: rgba(255,255,255,0.55); }
+  .rsvp-section .section-text  { color: rgba(255,255,255,0.55); }
 
   .btn-rsvp {
     display: inline-block;
     margin-top: 40px;
-    padding: 16px 52px;
+    padding: 18px 56px;
     border: 1px solid var(--gold);
     color: var(--gold-light);
     font-family: 'Montserrat', sans-serif;
@@ -384,60 +370,120 @@
     background: transparent;
     cursor: pointer;
   }
+  .btn-rsvp:hover { background: var(--gold); color: var(--dark); }
 
-  .btn-rsvp:hover {
-    background: var(--gold);
+  /* ── MODAL ── */
+  .modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .modal-backdrop.open { display: flex; }
+
+  .modal-box {
+    background: var(--cream);
+    max-width: 440px;
+    width: 100%;
+    padding: 48px 40px;
+    text-align: center;
+    position: relative;
+    animation: fadeUp 0.35s ease;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 16px; right: 20px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #aaa;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .modal-close:hover { color: var(--dark); }
+
+  .modal-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 300;
     color: var(--dark);
+    margin-bottom: 8px;
+  }
+  .modal-sub {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .modal-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--gold-light);
+    background: transparent;
+    padding: 12px 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: var(--dark);
+    outline: none;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: border-color 0.2s;
+  }
+  .modal-input:focus { border-bottom-color: var(--gold); }
+  .modal-input::placeholder { color: #bbb; }
+
+  .modal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+    padding: 16px 44px;
+    background: #25d366;
+    color: #fff;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    text-decoration: none;
+  }
+  .modal-btn:hover { opacity: 0.88; }
+
+  .modal-btn svg { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
+
+  .modal-thanks {
+    display: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-style: italic;
+    color: var(--gold);
+    margin-top: 8px;
   }
 
   /* ── FOOTER ── */
-  footer {
-    background: var(--dark);
-    padding: 40px 24px;
-    text-align: center;
-  }
+  footer { background: var(--dark); padding: 40px 24px; text-align: center; }
+  .footer-names { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-style: italic; color: var(--gold-light); letter-spacing: 2px; }
+  .footer-date  { font-size: 11px; letter-spacing: 5px; color: rgba(255,255,255,0.3); margin-top: 8px; text-transform: uppercase; }
 
-  .footer-names {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-style: italic;
-    color: var(--gold-light);
-    letter-spacing: 2px;
-  }
+  /* ── ORNAMENT ── */
+  .ornament { display: block; color: var(--gold); font-size: 22px; margin: 24px auto; opacity: 0.6; letter-spacing: 8px; }
 
-  .footer-date {
-    font-size: 11px;
-    letter-spacing: 5px;
-    color: rgba(255,255,255,0.3);
-    margin-top: 8px;
-    text-transform: uppercase;
-  }
-
-  /* ── ORNAMENTS ── */
-  .ornament {
-    display: block;
-    color: var(--gold);
-    font-size: 22px;
-    margin: 24px auto;
-    opacity: 0.6;
-    letter-spacing: 8px;
-  }
-
-  /* ── ANIMATIONS ── */
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-
-  .reveal.visible {
-    opacity: 1;
-    transform: none;
-  }
+  /* ── REVEAL ── */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
 
   @media (max-width: 480px) {
     .count-sep { display: none; }
     .details-grid { grid-template-columns: 1fr 1fr; }
+    .modal-box { padding: 40px 24px; }
   }
 </style>
 </head>
@@ -511,8 +557,18 @@
   </div>
 </section>
 
-<!-- PHOTO STRIP -->
-<div class="photo-strip"></div>
+<!-- PHOTO PORTRAIT -->
+<section class="photo-section reveal">
+  <p class="section-label" style="margin-bottom:40px">Азамат &amp; Ольга</p>
+  <div class="photo-frame-outer">
+    <div class="photo-ornament-top">✦</div>
+    <div class="photo-frame-inner">
+      <img src="photo.jpg" alt="Азамат и Ольга">
+    </div>
+    <div class="photo-ornament-bottom">✦</div>
+  </div>
+  <div class="photo-caption">Наша история</div>
+</section>
 
 <!-- DETAILS -->
 <section class="section reveal">
@@ -543,10 +599,9 @@
 <!-- QUOTE -->
 <section class="quote-section reveal">
   <p class="quote">
-    Любовь — это не смотреть друг на друга,
-    а смотреть вместе в одном направлении
+    Я смотрю в твои глаза — и вижу в них весь свой мир
   </p>
-  <span class="ornament" style="margin-top:32px">— Антуан де Сент-Экзюпери</span>
+  <div class="quote-author">— с любовью</div>
 </section>
 
 <!-- RSVP -->
@@ -557,7 +612,7 @@
     Просим подтвердить ваше присутствие до 10 июня.<br>
     Мы будем безмерно рады вас видеть!
   </p>
-  <a class="btn-rsvp" href="tel:+7XXXXXXXXXX">Подтвердить участие</a>
+  <button class="btn-rsvp" onclick="openModal()">Подтвердить участие</button>
 </section>
 
 <!-- FOOTER -->
@@ -566,19 +621,33 @@
   <div class="footer-date">20 · 06 · 2026</div>
 </footer>
 
+<!-- MODAL -->
+<div class="modal-backdrop" id="modal" onclick="closeOnBackdrop(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+
+    <div id="modal-form-wrap">
+      <div class="modal-title">Вы придёте? 🥂</div>
+      <div class="modal-sub">Напишите своё имя — и мы сразу<br>получим ваше подтверждение в WhatsApp</div>
+      <input class="modal-input" id="modal-name" type="text" placeholder="Ваше имя">
+      <br>
+      <button class="modal-btn" onclick="confirmRSVP()">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 0C5.373 0 0 5.373 0 12c0 2.117.554 4.1 1.523 5.82L.044 23.547a.75.75 0 0 0 .916.919l5.86-1.533A11.942 11.942 0 0 0 12 24c6.627 0 12-5.373 12-12S18.625 0 11.998 0zm0 21.818a9.822 9.822 0 0 1-5.011-1.37l-.36-.214-3.717.974.99-3.614-.234-.372A9.821 9.821 0 0 1 2.182 12c0-5.418 4.4-9.818 9.818-9.818S21.818 6.582 21.818 12 17.418 21.818 12 21.818z"/></svg>
+        Отправить в WhatsApp
+      </button>
+    </div>
+
+    <div class="modal-thanks" id="modal-thanks">
+      Ура! Ждём вас 20 июня 🎉
+    </div>
+  </div>
+</div>
+
 <script>
   // Countdown
   function updateCountdown() {
-    const target = new Date('2026-06-20T18:00:00');
-    const now = new Date();
-    const diff = target - now;
-    if (diff <= 0) {
-      document.getElementById('cd-days').textContent = '0';
-      document.getElementById('cd-hours').textContent = '0';
-      document.getElementById('cd-mins').textContent = '0';
-      document.getElementById('cd-secs').textContent = '0';
-      return;
-    }
+    const diff = new Date('2026-06-20T18:00:00') - new Date();
+    if (diff <= 0) { ['days','hours','mins','secs'].forEach(k => document.getElementById('cd-'+k).textContent = '00'); return; }
     const d = Math.floor(diff / 86400000);
     const h = Math.floor((diff % 86400000) / 3600000);
     const m = Math.floor((diff % 3600000) / 60000);
@@ -594,8 +663,34 @@
   // Scroll reveal
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Modal
+  function openModal() {
+    document.getElementById('modal').classList.add('open');
+    document.getElementById('modal-name').focus();
+  }
+  function closeModal() {
+    document.getElementById('modal').classList.remove('open');
+  }
+  function closeOnBackdrop(e) {
+    if (e.target === document.getElementById('modal')) closeModal();
+  }
+
+  function confirmRSVP() {
+    const name = document.getElementById('modal-name').value.trim();
+    const text = name
+      ? `Привет! Это ${name}. Подтверждаю участие на свадьбе Азамата и Ольги 20 июня 🥂`
+      : 'Привет! Подтверждаю участие на свадьбе Азамата и Ольги 20 июня 🥂';
+    const phone = '77474675284';
+    window.open('https://wa.me/' + phone + '?text=' + encodeURIComponent(text), '_blank');
+    document.getElementById('modal-form-wrap').style.display = 'none';
+    document.getElementById('modal-thanks').style.display = 'block';
+  }
+
+  // Esc to close
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 </script>
 
 </body>
