@@ -647,7 +647,7 @@ function doRSVP(){
   const name = document.getElementById('fName').value.trim();
   if(!name){document.getElementById('fName').focus();return;}
   const wish = document.getElementById('fWish').value.trim();
-  const txt = 'Привет! Подтверждаю участие на вашей свадьбе \u{1F942}\nИмя: '+name+(wish?'\nПожелание: '+wish:'');
+  const txt = 'Привет! Подтверждаю участие на вашей свадьбе 🥂\nИмя: '+name+(wish?'\nПожелание: '+wish:'');
   document.getElementById('waLink').href='https://wa.me/77474675284?text='+encodeURIComponent(txt);
   document.getElementById('form').style.display='none';
   document.getElementById('succ').style.display='block';
