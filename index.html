@@ -24,8 +24,18 @@ body{font-family:'Montserrat',sans-serif;font-weight:300;color:#896E4F;backgroun
 /* page wrapper */
 .page{position:relative;z-index:2}
 
-/* pearl utility */
-.p{border-radius:50%;background:radial-gradient(circle at 36% 32%,rgba(255,255,255,.97) 0%,#EEE5D0 28%,#D4C8A8 56%,#B8AC88 80%,#9C9070 100%);box-shadow:0 1px 6px rgba(80,55,20,.20),inset 0 -1px 3px rgba(80,55,20,.07)}
+/* pearl — lustrous gemstone look */
+.p{
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 32% 28%, rgba(255,255,255,.98) 0%, rgba(255,253,248,.0) 28%),
+    radial-gradient(circle at 68% 72%, rgba(200,185,160,.55) 0%, transparent 38%),
+    radial-gradient(ellipse at 40% 35%, #FDFAF5 0%, #EDE0C8 30%, #D8C8A8 56%, #BEB098 76%, #A09080 100%);
+  box-shadow:
+    0 2px 8px rgba(80,55,20,.25),
+    inset 0 -1px 4px rgba(80,55,20,.10),
+    inset 1px 1px 3px rgba(255,255,255,.60);
+}
 
 /* ── reveal helpers ── */
 .rv{opacity:0;transform:translateY(14px);transition:opacity .9s,transform .9s}
@@ -164,13 +174,15 @@ footer p{font-size:.50rem;letter-spacing:.28em;text-transform:uppercase;color:#8
   <div class="p" style="position:absolute;width:5px;height:5px;left:14%;top:40%;pointer-events:none"></div>
   <div class="wi">
     <span class="tag tag-g rv">приглашение</span>
-    <h2 class="wh rv">Дорогие наши<br>родные и близкие</h2>
+    <h2 class="wh rv">Дорогие друзья</h2>
     <span class="div rv2" style="color:#896E4F"></span>
     <p class="wt rv2">
-      Мы рады сообщить вам, что связываем свои жизни<br>
-      священными узами брака<br><br>
-      И с огромной радостью приглашаем вас разделить<br>
-      с нами этот <em>особенный день</em> нашей жизни
+      Жить, любить, чувствовать.<br>
+      Однажды мы поняли, что нет ничего важнее этого —<br>
+      и что <em>дальше мы хотим только вместе</em><br><br>
+      Вы — часть нашей истории.<br>
+      И нам было бы безумно приятно<br>
+      разделить этот день с вами
     </p>
   </div>
 </section>
@@ -351,10 +363,14 @@ footer p{font-size:.50rem;letter-spacing:.28em;text-transform:uppercase;color:#8
 
   function surf(u,t){
     var s=0.18,w=0.053;
+    /* stationary folds that breathe gently */
     for(var i=0;i<F.length;i++){
-      var f=F[i],p=f[0]+Math.sin(t*0.068+f[2])*0.013;
+      var f=F[i],p=f[0]+Math.sin(t*0.068+f[2])*0.038;
       s+=f[1]*fp(u-p,w);
     }
+    /* two traveling waves that cross the fabric — the "wind" */
+    s+=0.18*Math.sin(u*14-t*0.55+0.4)*Math.exp(-Math.pow((u-0.5)*1.1,2)*1.5);
+    s+=0.12*Math.sin(u*9 -t*0.38+2.1)*Math.exp(-Math.pow((u-0.35)*1.2,2)*1.8);
     return s;
   }
 
@@ -373,14 +389,14 @@ footer p{font-size:.50rem;letter-spacing:.28em;text-transform:uppercase;color:#8
         var vx=nx-0.5,vy=ny-0.5;
         s*=1-0.28*(vx*vx*1.2+vy*vy*0.9)*4;
         var dx=nx-sx,dy=ny-sy;
-        var sh=Math.max(0,0.84-Math.sqrt(dx*dx*1.7+dy*dy*2.6)*2.5)*0.50;
+        var sh=Math.max(0,0.90-Math.sqrt(dx*dx*1.4+dy*dy*2.0)*2.0)*0.65;
         var rgb=col(s+sh);
         var i=(y*W+x)*4;
         px[i]=rgb[0];px[i+1]=rgb[1];px[i+2]=rgb[2];px[i+3]=255;
       }
     }
     c.putImageData(im,0,0);
-    setTimeout(function(){requestAnimationFrame(frame);},52);
+    setTimeout(function(){requestAnimationFrame(frame);},33);
   }
   frame();
 }();
