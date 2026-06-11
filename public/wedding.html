@@ -168,6 +168,16 @@ body{font-family:'Montserrat',sans-serif;font-weight:300;color:#3D2B1A;backgroun
 .wa{display:inline-flex;align-items:center;gap:.75rem;padding:.85rem 2.2rem;background:#C5A870;color:#1C1814;font-size:.70rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;text-decoration:none;margin-top:2rem;transition:opacity .2s;font-family:'Montserrat',sans-serif}
 .wa:hover{opacity:.80}
 
+/* ═══ BOTTLE ANIMATION ═══ */
+.bottles{display:flex;justify-content:center;gap:1.4rem;margin:1.2rem 0 .5rem;user-select:none}
+.btl{font-size:1.6rem;display:inline-block;animation:btlSway 2.8s ease-in-out infinite}
+.btl:nth-child(2){animation-delay:.5s;animation-duration:3.2s}
+.btl:nth-child(3){animation-delay:1s;animation-duration:2.6s}
+@keyframes btlSway{
+  0%,100%{transform:rotate(-6deg) translateY(0)}
+  50%{transform:rotate(6deg) translateY(-5px)}
+}
+
 /* ═══ FAQ ═══ */
 .faq{max-width:580px;margin:0 auto;text-align:left}
 .faq-item{border-top:1px solid rgba(137,110,79,.13);padding:1.7rem 0}
@@ -321,7 +331,8 @@ footer p{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:#8
 
       <div class="faq-item">
         <span class="fq">Нужно ли дарить цветы?</span>
-        <p class="fa">Следующим утром мы уже уезжаем, и букет, как ни жаль, в дорогу не возьмёшь. Зато <em>хорошее вино</em> — это воспоминание, которое можно открыть в любой момент и снова почувствовать этот вечер.</p>
+        <div class="bottles"><span class="btl">🍾</span><span class="btl">🍷</span><span class="btl">🍾</span></div>
+        <p class="fa">Следующим утром мы уже уезжаем — букет в дорогу не возьмёшь и в полной мере не насладишься. Зато <em>хорошее вино</em> — это воспоминание, которое можно открыть в любой момент и снова почувствовать этот вечер.</p>
       </div>
 
       <div class="faq-item">
