@@ -43,7 +43,7 @@ body{font-family:'Montserrat',sans-serif;font-weight:300;color:#3D2B1A;backgroun
 .rv2.vis{opacity:1}
 
 /* ── eyebrow tags ── */
-.tag{font-size:.50rem;letter-spacing:.54em;text-transform:uppercase;font-weight:400;display:block;margin-bottom:2rem}
+.tag{font-size:.64rem;letter-spacing:.54em;text-transform:uppercase;font-weight:400;display:block;margin-bottom:2rem}
 .tag-g{color:#C5A870}
 .tag-w{color:#C5A870}
 
@@ -55,15 +55,15 @@ body{font-family:'Montserrat',sans-serif;font-weight:300;color:#3D2B1A;backgroun
 .hero-ov{position:absolute;inset:0;background:rgba(45,28,22,.24);pointer-events:none}
 .hero-in{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
 
-.h-save{font-size:clamp(.45rem,.82vw,.60rem);letter-spacing:.58em;text-transform:uppercase;color:rgba(255,255,250,.65);font-weight:400;margin-bottom:2.8rem;opacity:0;animation:aUp .8s ease .7s forwards}
+.h-save{font-size:clamp(.58rem,1.0vw,.74rem);letter-spacing:.58em;text-transform:uppercase;color:rgba(255,255,250,.65);font-weight:400;margin-bottom:2.8rem;opacity:0;animation:aUp .8s ease .7s forwards}
 .h-names{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(4.5rem,13vw,11rem);line-height:.92;letter-spacing:.01em;color:#FFFFFA;text-shadow:0 2px 36px rgba(0,0,0,.20);margin-bottom:1.6rem;opacity:0;animation:aN 1.2s cubic-bezier(.16,1,.3,1) .9s forwards}
 .amp{font-family:'Great Vibes',cursive;color:rgba(255,255,250,.72);font-size:.60em;display:inline-block;padding:0 .08em}
 .h-line{width:clamp(80px,14vw,170px);height:1px;background:linear-gradient(to right,transparent,rgba(255,255,250,.38),transparent);margin:0 auto 1.6rem;opacity:0;animation:aF .7s ease 2s forwards}
-.h-date{font-size:clamp(.72rem,1.25vw,.95rem);color:rgba(255,255,250,.58);letter-spacing:.14em;margin-bottom:.55rem;opacity:0;animation:aUp .7s ease 2.1s forwards}
-.h-venue{font-size:clamp(.55rem,.92vw,.72rem);color:rgba(255,255,250,.36);letter-spacing:.07em;opacity:0;animation:aUp .7s ease 2.35s forwards;margin-bottom:5.5rem}
+.h-date{font-size:clamp(.88rem,1.5vw,1.10rem);color:rgba(255,255,250,.58);letter-spacing:.14em;margin-bottom:.55rem;opacity:0;animation:aUp .7s ease 2.1s forwards}
+.h-venue{font-size:clamp(.70rem,1.1vw,.88rem);color:rgba(255,255,250,.36);letter-spacing:.07em;opacity:0;animation:aUp .7s ease 2.35s forwards;margin-bottom:5.5rem}
 
 .scue{opacity:0;animation:aF .7s ease 3s forwards;display:flex;flex-direction:column;align-items:center;gap:.4rem}
-.scue-t{font-size:.38rem;letter-spacing:.42em;text-transform:uppercase;color:rgba(255,255,250,.26);font-weight:400}
+.scue-t{font-size:.50rem;letter-spacing:.42em;text-transform:uppercase;color:rgba(255,255,250,.26);font-weight:400}
 .scue-l{width:1px;height:30px;overflow:hidden;position:relative}
 .scue-l::after{content:'';position:absolute;top:-100%;left:0;width:1px;height:100%;background:rgba(255,255,250,.45);animation:aDrop 2.1s ease 3.3s infinite}
 
@@ -76,8 +76,8 @@ body{font-family:'Montserrat',sans-serif;font-weight:300;color:#3D2B1A;backgroun
 .ws{background:#EDEAE5;position:relative;z-index:3;padding:5.5rem 8%;overflow:hidden}
 .wi{max-width:570px;margin:0 auto;text-align:center}
 
-.wh{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(2rem,4vw,3.6rem);color:#1C1814;line-height:1.22;margin-bottom:1.6rem}
-.wt{font-size:clamp(.80rem,1.25vw,.96rem);line-height:2.05;color:#787068}
+.wh{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(2.4rem,5vw,4.2rem);color:#1C1814;line-height:1.22;margin-bottom:1.6rem}
+.wt{font-size:clamp(.96rem,1.55vw,1.14rem);line-height:2.05;color:#787068}
 .wt em{font-weight:500;font-style:normal;color:#2A1A0E}
 
 /* ═══ PHOTO OPENER — flows into silk below ═══ */
@@ -96,37 +96,37 @@ body{font-family:'Montserrat',sans-serif;font-weight:300;color:#3D2B1A;backgroun
   background:linear-gradient(to bottom,transparent,#EDEAE5);z-index:1;pointer-events:none}
 /* date — very top */
 .po-date{position:absolute;top:clamp(1.0rem,3vw,2rem);left:0;right:0;text-align:center;z-index:2;
-  font-family:'Montserrat',sans-serif;font-size:clamp(.42rem,.72vw,.54rem);letter-spacing:.58em;
+  font-family:'Montserrat',sans-serif;font-size:clamp(.54rem,.90vw,.68rem);letter-spacing:.58em;
   text-transform:uppercase;color:rgba(255,255,250,.70);font-weight:400;
   animation:aUp .9s ease .4s both}
 /* names block — stacked vertically, center at ~63% */
 .po-name-block{position:absolute;top:63%;transform:translateY(-50%);left:0;right:0;text-align:center;z-index:2;
   animation:aN 1.2s cubic-bezier(.16,1,.3,1) .6s both}
 .po-name-line{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;
-  font-size:clamp(2.6rem,8.5vw,6.5rem);color:#FFFFFA;line-height:1.05;
+  font-size:clamp(3.0rem,10vw,7.5rem);color:#FFFFFA;line-height:1.05;
   text-shadow:0 2px 32px rgba(0,0,0,.35)}
-.po-amp-line{font-family:'Great Vibes',cursive;font-size:clamp(1.4rem,4.5vw,3.2rem);
+.po-amp-line{font-family:'Great Vibes',cursive;font-size:clamp(1.8rem,5.5vw,4.0rem);
   color:rgba(255,255,250,.70);line-height:1.5}
 /* scroll indicator */
 .po-scue{position:absolute;bottom:clamp(0.6rem,1.5vw,1.4rem);left:0;right:0;text-align:center;z-index:2;
   display:flex;flex-direction:column;align-items:center;gap:.35rem;animation:aF .7s ease 2s both}
-.po-scue-t{font-size:.36rem;letter-spacing:.42em;text-transform:uppercase;color:rgba(255,255,250,.22);
+.po-scue-t{font-size:.48rem;letter-spacing:.42em;text-transform:uppercase;color:rgba(255,255,250,.22);
   font-family:'Montserrat',sans-serif;font-weight:400}
 .po-scue-l{width:1px;height:26px;overflow:hidden;position:relative}
 .po-scue-l::after{content:'';position:absolute;top:-100%;left:0;width:1px;height:100%;
   background:rgba(255,255,250,.38);animation:aDrop 2.1s ease 1s infinite}
 
 /* ═══ DATE BLOCK ═══ */
-.date-big{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(2.6rem,7.5vw,6.5rem);color:#1C1814;line-height:1;display:block;margin-bottom:.4rem}
+.date-big{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(3.0rem,9vw,7.5rem);color:#1C1814;line-height:1;display:block;margin-bottom:.4rem}
 .cntd{display:flex;gap:2.2rem;justify-content:center;margin-top:2rem}
 .cu{text-align:center}
-.cn{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.8rem,3.5vw,2.8rem);color:#1C1814;display:block;line-height:1}
-.cl{font-size:.42rem;letter-spacing:.3em;text-transform:uppercase;color:#C5A870;opacity:.70;margin-top:.35rem;display:block}
+.cn{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(2.2rem,4.2vw,3.4rem);color:#1C1814;display:block;line-height:1}
+.cl{font-size:.54rem;letter-spacing:.3em;text-transform:uppercase;color:#C5A870;opacity:.70;margin-top:.35rem;display:block}
 
 /* ═══ LOCATION ═══ */
-.loc-name{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.6rem,3vw,2.6rem);color:#1C1814;display:block;margin-bottom:.35rem}
-.loc-addr{font-size:clamp(.75rem,1.15vw,.90rem);line-height:1.9;color:#787068}
-.map-btn{display:inline-block;margin-top:1.5rem;padding:.6rem 1.8rem;border:1px solid rgba(137,110,79,.40);font-size:.50rem;letter-spacing:.38em;text-transform:uppercase;color:#C5A870;text-decoration:none;font-weight:400;transition:background .22s,color .22s}
+.loc-name{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.9rem,3.6vw,3.1rem);color:#1C1814;display:block;margin-bottom:.35rem}
+.loc-addr{font-size:clamp(.92rem,1.4vw,1.08rem);line-height:1.9;color:#787068}
+.map-btn{display:inline-block;margin-top:1.5rem;padding:.6rem 1.8rem;border:1px solid rgba(137,110,79,.40);font-size:.62rem;letter-spacing:.38em;text-transform:uppercase;color:#C5A870;text-decoration:none;font-weight:400;transition:background .22s,color .22s}
 .map-btn:hover{background:#C5A870;color:#1C1814}
 
 /* ═══ QUOTE SECTION — light on dark ═══ */
@@ -134,13 +134,13 @@ body{font-family:'Montserrat',sans-serif;font-weight:300;color:#3D2B1A;backgroun
 .quote-text{
   font-family:'Cormorant Garamond',serif;
   font-style:italic;font-weight:300;
-  font-size:clamp(1.6rem,3.5vw,2.8rem);
+  font-size:clamp(1.9rem,4.2vw,3.4rem);
   line-height:1.45;color:#1C1814;
   margin:1.8rem 0;max-width:680px;margin-left:auto;margin-right:auto;
   quotes:none;
 }
 .quote-body{
-  font-size:clamp(.80rem,1.3vw,.96rem);line-height:2.1;
+  font-size:clamp(.96rem,1.6vw,1.14rem);line-height:2.1;
   color:#787068;max-width:520px;margin:0 auto;
 }
 
@@ -152,39 +152,39 @@ body{font-family:'Montserrat',sans-serif;font-weight:300;color:#3D2B1A;backgroun
 .sk-sec{background:#EDEAE5;position:relative;z-index:3;padding:5.5rem 8%;text-align:center;overflow:hidden}
 .sk-ov{display:none}
 .si{position:relative;z-index:1;max-width:600px;margin:0 auto}
-.sh{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(2rem,3.8vw,3.4rem);color:#1C1814;line-height:1.22;margin-bottom:1.8rem}
-.st{font-size:clamp(.78rem,1.2vw,.93rem);line-height:1.95;color:#787068}
+.sh{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(2.4rem,4.6vw,4.0rem);color:#1C1814;line-height:1.22;margin-bottom:1.8rem}
+.st{font-size:clamp(.94rem,1.45vw,1.10rem);line-height:1.95;color:#787068}
 
 /* timeline */
 .tl{margin-top:3rem;position:relative;padding-left:2.4rem;max-width:320px;margin-left:auto;margin-right:auto;text-align:left}
 .tl::before{content:'';position:absolute;left:0;top:.6rem;bottom:.6rem;width:1px;background:rgba(137,110,79,.20)}
 .ti{position:relative;padding:0 0 2.2rem 1.4rem}
 .ti::before{content:'';position:absolute;left:-2.85rem;top:.58rem;width:6px;height:6px;border-radius:50%;background:rgba(137,110,79,.55)}
-.ti-t{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.4rem,2.5vw,2rem);color:#1C1814;display:block;margin-bottom:.22rem;line-height:1}
-.ti-d{font-size:clamp(.68rem,1.05vw,.80rem);color:#787068;line-height:1.6}
+.ti-t{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.7rem,3.0vw,2.5rem);color:#1C1814;display:block;margin-bottom:.22rem;line-height:1}
+.ti-d{font-size:clamp(.84rem,1.3vw,.98rem);color:#787068;line-height:1.6}
 
 /* ═══ RSVP ═══ */
 .rsvp{background:#F5F2EC;position:relative;z-index:3;padding:5.5rem 8%;text-align:center;overflow:hidden;border-top:1px solid rgba(137,110,79,.12)}
-.wa{display:inline-flex;align-items:center;gap:.75rem;padding:.85rem 2.2rem;background:#C5A870;color:#1C1814;font-size:.56rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;text-decoration:none;margin-top:2rem;transition:opacity .2s;font-family:'Montserrat',sans-serif}
+.wa{display:inline-flex;align-items:center;gap:.75rem;padding:.85rem 2.2rem;background:#C5A870;color:#1C1814;font-size:.70rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;text-decoration:none;margin-top:2rem;transition:opacity .2s;font-family:'Montserrat',sans-serif}
 .wa:hover{opacity:.80}
 
 /* ═══ FAQ ═══ */
 .faq{max-width:580px;margin:0 auto;text-align:left}
 .faq-item{border-top:1px solid rgba(137,110,79,.13);padding:1.7rem 0}
 .faq-item:last-child{border-bottom:1px solid rgba(137,110,79,.13)}
-.fq{font-size:.50rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:#C5A870;display:block;margin-bottom:.75rem}
-.fa{font-size:clamp(.78rem,1.2vw,.93rem);line-height:2;color:#787068}
+.fq{font-size:.64rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:#C5A870;display:block;margin-bottom:.75rem}
+.fa{font-size:clamp(.94rem,1.45vw,1.10rem);line-height:2;color:#787068}
 .fa em{font-weight:500;font-style:normal}
 .fa a{color:#C5A870;border-bottom:1px solid rgba(197,168,112,.30);text-decoration:none;font-weight:500}
 .wa svg{flex-shrink:0}
 
 /* footer */
 footer{background:#EDEAE5;position:relative;z-index:3;padding:2rem 8%;text-align:center;border-top:1px solid rgba(137,110,79,.10)}
-footer p{font-size:.50rem;letter-spacing:.28em;text-transform:uppercase;color:#896E4F;opacity:.40}
+footer p{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:#896E4F;opacity:.40}
 
 /* mobile */
 @media(max-width:480px){
-  .h-names{font-size:clamp(3.4rem,17vw,5.5rem)}
+  .h-names{font-size:clamp(3.8rem,19vw,6.5rem)}
   .cntd{gap:1.5rem}
   .tl{padding-left:1.6rem}
   .ti{padding-left:1rem}
