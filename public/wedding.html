@@ -11,13 +11,13 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 html,body{min-height:100%;overflow-x:hidden}
-body{font-family:'Montserrat',sans-serif;font-weight:300;color:#E8DDD0;background:#1A1714;cursor:none}
+body{font-family:'Montserrat',sans-serif;font-weight:300;color:#3D2B1A;background:#FFFFFA;cursor:none}
 
 /* no silk canvas */
 #sk{display:none}
 
 /* cursor */
-#cur{position:fixed;width:20px;height:20px;border-radius:50%;border:1px solid rgba(137,110,79,.45);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .18s,height .18s;will-change:transform}
+#cur{position:fixed;width:20px;height:20px;border-radius:50%;border:1px solid rgba(60,35,15,.35);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .18s,height .18s;will-change:transform}
 #cur.h{width:38px;height:38px;border-color:#896E4F}
 #dot{position:fixed;width:3px;height:3px;border-radius:50%;background:#896E4F;pointer-events:none;z-index:10000;transform:translate(-50%,-50%)}
 
@@ -44,8 +44,8 @@ body{font-family:'Montserrat',sans-serif;font-weight:300;color:#E8DDD0;backgroun
 
 /* ── eyebrow tags ── */
 .tag{font-size:.50rem;letter-spacing:.54em;text-transform:uppercase;font-weight:400;display:block;margin-bottom:2rem}
-.tag-g{color:#C9A87A}
-.tag-w{color:#C9A87A}
+.tag-g{color:#896E4F}
+.tag-w{color:#896E4F}
 
 /* ── divider ── */
 .div{width:clamp(50px,9vw,100px);height:1px;margin:1.8rem auto;background:linear-gradient(to right,transparent,currentColor,transparent);opacity:.35;display:block}
@@ -72,19 +72,19 @@ body{font-family:'Montserrat',sans-serif;font-weight:300;color:#E8DDD0;backgroun
 @keyframes aN{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @keyframes aDrop{0%{top:-100%}100%{top:100%}}
 
-/* ═══ DARK SECTIONS ═══ */
-.ws{background:#1A1714;position:relative;z-index:3;padding:5.5rem 8%;overflow:hidden}
+/* ═══ LIGHT SECTIONS ═══ */
+.ws{background:#FFFFFA;position:relative;z-index:3;padding:5.5rem 8%;overflow:hidden}
 .wi{max-width:570px;margin:0 auto;text-align:center}
 
-.wh{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(2rem,4vw,3.6rem);color:#E8DDD0;line-height:1.22;margin-bottom:1.6rem}
-.wt{font-size:clamp(.80rem,1.25vw,.96rem);line-height:2.05;color:rgba(232,221,208,.72)}
-.wt em{font-weight:500;font-style:normal;color:#E8DDD0}
+.wh{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(2rem,4vw,3.6rem);color:#2A1A0E;line-height:1.22;margin-bottom:1.6rem}
+.wt{font-size:clamp(.80rem,1.25vw,.96rem);line-height:2.05;color:#6B4E35}
+.wt em{font-weight:500;font-style:normal;color:#2A1A0E}
 
 /* ═══ PHOTO OPENER — flows into silk below ═══ */
 .page{display:flex;flex-direction:column}
 .photo-opener{
   order:-1;height:100svh;position:relative;z-index:3;overflow:hidden;
-  background:#1A1714;
+  background:#F8F4EF;
 }
 .photo-opener .photo-wrap{height:100%;max-width:none;margin:0;padding:0}
 .photo-opener .photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;filter:contrast(1.02) saturate(0.88) brightness(0.90);box-shadow:none}
@@ -99,7 +99,7 @@ body{font-family:'Montserrat',sans-serif;font-weight:300;color:#E8DDD0;backgroun
   text-transform:uppercase;color:rgba(255,255,250,.55);font-weight:400;
   animation:aUp .9s ease .4s both}
 /* names — bottom */
-.po-names{position:absolute;bottom:clamp(2rem,6vw,4.5rem);left:0;right:0;text-align:center;z-index:2;padding:0 8%;
+.po-names{position:absolute;bottom:clamp(4.5rem,9vw,7rem);left:0;right:0;text-align:center;z-index:2;padding:0 8%;
   font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;
   font-size:clamp(3.4rem,10vw,8.5rem);color:#FFFFFA;line-height:.93;
   text-shadow:0 2px 40px rgba(0,0,0,.45);
@@ -111,70 +111,70 @@ body{font-family:'Montserrat',sans-serif;font-weight:300;color:#E8DDD0;backgroun
 .po-scue-l::after{content:'';position:absolute;top:-100%;left:0;width:1px;height:100%;background:rgba(255,255,250,.38);animation:aDrop 2.1s ease 1s infinite}
 
 /* ═══ DATE BLOCK ═══ */
-.date-big{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(2.6rem,7.5vw,6.5rem);color:#E8DDD0;line-height:1;display:block;margin-bottom:.4rem}
+.date-big{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(2.6rem,7.5vw,6.5rem);color:#2A1A0E;line-height:1;display:block;margin-bottom:.4rem}
 .cntd{display:flex;gap:2.2rem;justify-content:center;margin-top:2rem}
 .cu{text-align:center}
-.cn{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.8rem,3.5vw,2.8rem);color:#E8DDD0;display:block;line-height:1}
-.cl{font-size:.42rem;letter-spacing:.3em;text-transform:uppercase;color:#C9A87A;opacity:.70;margin-top:.35rem;display:block}
+.cn{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.8rem,3.5vw,2.8rem);color:#2A1A0E;display:block;line-height:1}
+.cl{font-size:.42rem;letter-spacing:.3em;text-transform:uppercase;color:#896E4F;opacity:.70;margin-top:.35rem;display:block}
 
 /* ═══ LOCATION ═══ */
-.loc-name{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.6rem,3vw,2.6rem);color:#E8DDD0;display:block;margin-bottom:.35rem}
-.loc-addr{font-size:clamp(.75rem,1.15vw,.90rem);line-height:1.9;color:rgba(232,221,208,.60)}
-.map-btn{display:inline-block;margin-top:1.5rem;padding:.6rem 1.8rem;border:1px solid rgba(201,168,122,.35);font-size:.50rem;letter-spacing:.38em;text-transform:uppercase;color:#C9A87A;text-decoration:none;font-weight:400;transition:background .22s,color .22s}
-.map-btn:hover{background:#C9A87A;color:#1A1714}
+.loc-name{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.6rem,3vw,2.6rem);color:#2A1A0E;display:block;margin-bottom:.35rem}
+.loc-addr{font-size:clamp(.75rem,1.15vw,.90rem);line-height:1.9;color:#6B4E35;opacity:.80}
+.map-btn{display:inline-block;margin-top:1.5rem;padding:.6rem 1.8rem;border:1px solid rgba(137,110,79,.40);font-size:.50rem;letter-spacing:.38em;text-transform:uppercase;color:#896E4F;text-decoration:none;font-weight:400;transition:background .22s,color .22s}
+.map-btn:hover{background:#896E4F;color:#FFFFFA}
 
 /* ═══ QUOTE SECTION — light on dark ═══ */
-.qs{padding:5rem 8% 4.5rem;text-align:center;background:#252018!important}
+.qs{padding:5rem 8% 4.5rem;text-align:center;background:#F5F0E8!important}
 .quote-text{
   font-family:'Cormorant Garamond',serif;
   font-style:italic;font-weight:300;
   font-size:clamp(1.6rem,3.5vw,2.8rem);
-  line-height:1.45;color:#E8DDD0;
+  line-height:1.45;color:#2A1A0E;
   margin:1.8rem 0;max-width:680px;margin-left:auto;margin-right:auto;
   quotes:none;
 }
 .quote-body{
   font-size:clamp(.80rem,1.3vw,.96rem);line-height:2.1;
-  color:rgba(232,221,208,.65);max-width:520px;margin:0 auto;
+  color:#6B4E35;opacity:.80;max-width:520px;margin:0 auto;
 }
 
 /* ═══ RING PHOTO ═══ */
 .ring-ph{position:relative;z-index:3;height:52vw;max-height:480px;min-height:240px;overflow:hidden}
 .ring-ph img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block}
 
-/* ═══ DARK SILK SECTIONS ═══ */
-.sk-sec{background:#1A1714;position:relative;z-index:3;padding:5.5rem 8%;text-align:center;overflow:hidden}
+/* ═══ LIGHT SILK SECTIONS ═══ */
+.sk-sec{background:#FFFFFA;position:relative;z-index:3;padding:5.5rem 8%;text-align:center;overflow:hidden}
 .sk-ov{display:none}
 .si{position:relative;z-index:1;max-width:600px;margin:0 auto}
-.sh{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(2rem,3.8vw,3.4rem);color:#E8DDD0;line-height:1.22;margin-bottom:1.8rem}
-.st{font-size:clamp(.78rem,1.2vw,.93rem);line-height:1.95;color:rgba(232,221,208,.72)}
+.sh{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(2rem,3.8vw,3.4rem);color:#2A1A0E;line-height:1.22;margin-bottom:1.8rem}
+.st{font-size:clamp(.78rem,1.2vw,.93rem);line-height:1.95;color:#6B4E35}
 
 /* timeline */
 .tl{margin-top:3rem;position:relative;padding-left:2.4rem;max-width:320px;margin-left:auto;margin-right:auto;text-align:left}
-.tl::before{content:'';position:absolute;left:0;top:.6rem;bottom:.6rem;width:1px;background:rgba(201,168,122,.20)}
+.tl::before{content:'';position:absolute;left:0;top:.6rem;bottom:.6rem;width:1px;background:rgba(137,110,79,.20)}
 .ti{position:relative;padding:0 0 2.2rem 1.4rem}
-.ti::before{content:'';position:absolute;left:-2.85rem;top:.58rem;width:6px;height:6px;border-radius:50%;background:rgba(201,168,122,.60)}
-.ti-t{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.4rem,2.5vw,2rem);color:#FFFFFA;display:block;margin-bottom:.22rem;line-height:1}
-.ti-d{font-size:clamp(.68rem,1.05vw,.80rem);color:rgba(255,255,250,.58);line-height:1.6}
+.ti::before{content:'';position:absolute;left:-2.85rem;top:.58rem;width:6px;height:6px;border-radius:50%;background:rgba(137,110,79,.55)}
+.ti-t{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.4rem,2.5vw,2rem);color:#2A1A0E;display:block;margin-bottom:.22rem;line-height:1}
+.ti-d{font-size:clamp(.68rem,1.05vw,.80rem);color:#6B4E35;opacity:.80;line-height:1.6}
 
 /* ═══ RSVP ═══ */
-.rsvp{background:#1A1714;position:relative;z-index:3;padding:5.5rem 8%;text-align:center;overflow:hidden;border-top:1px solid rgba(201,168,122,.15)}
-.wa{display:inline-flex;align-items:center;gap:.75rem;padding:.85rem 2.2rem;background:#C9A87A;color:#1A1714;font-size:.56rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;text-decoration:none;margin-top:2rem;transition:opacity .2s;font-family:'Montserrat',sans-serif}
+.rsvp{background:#F5F0E8;position:relative;z-index:3;padding:5.5rem 8%;text-align:center;overflow:hidden;border-top:1px solid rgba(137,110,79,.12)}
+.wa{display:inline-flex;align-items:center;gap:.75rem;padding:.85rem 2.2rem;background:#896E4F;color:#FFFFFA;font-size:.56rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;text-decoration:none;margin-top:2rem;transition:opacity .2s;font-family:'Montserrat',sans-serif}
 .wa:hover{opacity:.80}
 
 /* ═══ FAQ ═══ */
 .faq{max-width:580px;margin:0 auto;text-align:left}
-.faq-item{border-top:1px solid rgba(201,168,122,.12);padding:1.7rem 0}
-.faq-item:last-child{border-bottom:1px solid rgba(201,168,122,.12)}
-.fq{font-size:.50rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:#C9A87A;display:block;margin-bottom:.75rem}
-.fa{font-size:clamp(.78rem,1.2vw,.93rem);line-height:2;color:rgba(232,221,208,.70)}
+.faq-item{border-top:1px solid rgba(137,110,79,.13);padding:1.7rem 0}
+.faq-item:last-child{border-bottom:1px solid rgba(137,110,79,.13)}
+.fq{font-size:.50rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:#896E4F;display:block;margin-bottom:.75rem}
+.fa{font-size:clamp(.78rem,1.2vw,.93rem);line-height:2;color:#6B4E35;opacity:.85}
 .fa em{font-weight:500;font-style:normal}
-.fa a{color:#C9A87A;border-bottom:1px solid rgba(201,168,122,.35);text-decoration:none;font-weight:500}
+.fa a{color:#896E4F;border-bottom:1px solid rgba(137,110,79,.35);text-decoration:none;font-weight:500}
 .wa svg{flex-shrink:0}
 
 /* footer */
-footer{background:#1A1714;position:relative;z-index:3;padding:2rem 8%;text-align:center;border-top:1px solid rgba(201,168,122,.12)}
-footer p{font-size:.50rem;letter-spacing:.28em;text-transform:uppercase;color:#C9A87A;opacity:.45}
+footer{background:#FFFFFA;position:relative;z-index:3;padding:2rem 8%;text-align:center;border-top:1px solid rgba(137,110,79,.10)}
+footer p{font-size:.50rem;letter-spacing:.28em;text-transform:uppercase;color:#896E4F;opacity:.40}
 
 /* mobile */
 @media(max-width:480px){
@@ -196,11 +196,11 @@ footer p{font-size:.50rem;letter-spacing:.28em;text-transform:uppercase;color:#C
 <!-- ══════ QUOTE ══════ -->
 <section class="ws qs">
   <div class="wi">
-    <span class="div rv2" style="color:#C9A87A"></span>
+    <span class="div rv2" style="color:#896E4F"></span>
     <blockquote class="quote-text rv">
       «Любовь — это не то, что ты находишь.<br>Это то, что с тобой происходит.»
     </blockquote>
-    <span class="div rv2" style="color:#C9A87A"></span>
+    <span class="div rv2" style="color:#896E4F"></span>
     <p class="quote-body rv2">
       Мы прошли долгий путь — и теперь хотим отметить это событие<br>
       в окружении самых близких нам людей.<br>
@@ -259,7 +259,7 @@ footer p{font-size:.50rem;letter-spacing:.28em;text-transform:uppercase;color:#C
     <span class="tag tag-g rv">дата торжества</span>
     <span class="date-big rv">19 · 06 · 2026</span>
     <span class="rv2" style="display:block;font-size:.58rem;letter-spacing:.20em;text-transform:uppercase;opacity:.48;margin-top:.3rem">пятница</span>
-    <span class="div rv2" style="color:#C9A87A"></span>
+    <span class="div rv2" style="color:#896E4F"></span>
     <div class="cntd rv2">
       <div class="cu"><span class="cn" id="cd-d">—</span><span class="cl">дней</span></div>
       <div class="cu"><span class="cn" id="cd-h">—</span><span class="cl">часов</span></div>
@@ -274,7 +274,7 @@ footer p{font-size:.50rem;letter-spacing:.28em;text-transform:uppercase;color:#C
     <span class="tag tag-g rv">место торжества</span>
     <span class="loc-name rv">Comfort Hotel Astana</span>
     <span class="loc-name rv" style="font-size:clamp(1.1rem,1.8vw,1.75rem);opacity:.52">Зал Эдезза</span>
-    <span class="div rv2" style="color:#C9A87A"></span>
+    <span class="div rv2" style="color:#896E4F"></span>
     <p class="loc-addr rv2">ул. Космонавтов 60<br>район Чубары, Астана</p>
     <a href="https://2gis.kz/astana" class="map-btn rv2" target="_blank" rel="noopener">Открыть карту</a>
   </div>
@@ -301,7 +301,7 @@ footer p{font-size:.50rem;letter-spacing:.28em;text-transform:uppercase;color:#C
   <div class="wi">
     <span class="tag tag-g rv">вопросы и ответы</span>
     <h2 class="wh rv">Всё, что вы хотели<br>знать</h2>
-    <span class="div rv2" style="color:#C9A87A"></span>
+    <span class="div rv2" style="color:#896E4F"></span>
     <div class="faq rv2">
 
       <div class="faq-item">
@@ -346,7 +346,7 @@ footer p{font-size:.50rem;letter-spacing:.28em;text-transform:uppercase;color:#C
   <div class="wi" style="position:relative;z-index:1">
     <span class="tag tag-g rv">подтвердите присутствие</span>
     <h2 class="wh rv">Будем рады<br>вашему ответу</h2>
-    <span class="div rv2" style="color:#C9A87A"></span>
+    <span class="div rv2" style="color:#896E4F"></span>
     <p class="wt rv2" style="opacity:.65">
       Пожалуйста, подтвердите своё присутствие<br>до 15 июня 2026 года
     </p>
